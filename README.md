@@ -4,4 +4,4 @@ mysql> GRANT ALL PRIVILEGES ON testwork.* TO spring@localhost IDENTIFIED BY 'p-1
 
 from project dir
 mvn package
-mvn tomcat8:run
+mvn spring-boot:run
