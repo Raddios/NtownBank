@@ -70,16 +70,18 @@ public class ClientController {
 
 	@RequestMapping(value = "{id}/newaccount", method = RequestMethod.GET)
 	public String addAccount(Model model) {
-		model.addAttribute("account", new Account());
+		Account account = new Account();
+		
+		model.addAttribute("account", account);
+		
 		return "newaccount";
 	}
 
 	@RequestMapping(value = "{id}/accountlist", method = RequestMethod.POST)
-	public String addAccount(@ModelAttribute("account") Account account, @PathVariable("id") int id) {
-		account.setClientId(clientService.getClientById(id));
+	public String addAccount(@RequestParam("balance") int balance, @PathVariable("id") int id) {
 		
-		accountService.add(account);
-		
+		accountService.addAccounToClient(balance, id);
+
 		return "redirect:accountlist";
 	}
 	
@@ -125,8 +127,9 @@ public class ClientController {
 
 	@RequestMapping(value = "/transactions", method = RequestMethod.POST)
 	public String addTransaction(@ModelAttribute("transaction") Transactions transaction) {
+		
 		accountService.exchange(transaction);
-		transactionsService.add(transaction);
+		
 		return "redirect:transactions";
 	}
 }

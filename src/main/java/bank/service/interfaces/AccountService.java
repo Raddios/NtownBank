@@ -15,4 +15,6 @@ public interface AccountService {
 
 	void decreaseBalance(int balance, int id);
 
+	void addAccounToClient(int balance, int id);
+
 }
