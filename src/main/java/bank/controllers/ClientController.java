@@ -33,7 +33,13 @@ public class ClientController {
 		this.accountService = accountService;
 		this.transactionsService = transactionsService;
 	}
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String index() {
+		return "redirect:index";
 
+	};
+	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String clients(Model model) {
 		List<Client> clients = clientService.getAll();
