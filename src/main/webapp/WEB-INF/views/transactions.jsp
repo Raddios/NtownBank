@@ -17,14 +17,18 @@
 		<tr>
 			<td>ID</td>
 			<td>Sender Account ID</td>
+			<td>Sender ID</td>
 			<td>Recipient Account ID</td>
+			<td>Recipient ID</td>
 			<td>Summ of transaction</td>
 			<td>Date of transaction</td>
 		</tr>
 		<c:forEach var="transaction" items="${transactions }">
 			<tr>
 				<td><c:out value="${transaction.id}"></c:out></td>
+				<td><c:out value="${transaction.senderAccountID}"></c:out></td>
 				<td><c:out value="${transaction.senderId}"></c:out></td>
+				<td><c:out value="${transaction.recipientAccountId}"></c:out></td>
 				<td><c:out value="${transaction.recipientId}"></c:out></td>
 				<td><c:out value="${transaction.summOfTransaction}"></c:out></td>
 				<td><c:out value="${transaction.dateOfTransaction}"></c:out></td>

@@ -15,7 +15,7 @@
                 <i>Sender Account ID:</i>
             </td>
             <td>
-                <f:input path="senderId"/>
+                <f:input path="senderAccountID"/>
             </td>
         </tr>
         <tr>
@@ -23,7 +23,7 @@
                 <i>Recipient Account ID:</i>
             </td>
             <td>
-                <f:input path="recipientId"/>
+                <f:input path="recipientAccountId"/>
             </td>
         </tr>
         <tr>

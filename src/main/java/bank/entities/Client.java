@@ -32,7 +32,7 @@ public class Client implements Serializable {
 	@Column(name = "Client_Age")
 	private int age;
 
-	@OneToMany(cascade = CascadeType.MERGE, mappedBy = "client", orphanRemoval = true)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "client", orphanRemoval = true)
 	private List<Account> account;
 
 	public Client() {

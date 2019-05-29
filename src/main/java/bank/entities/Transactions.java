@@ -25,12 +25,34 @@ public class Transactions implements Serializable{
 	@Column(name = "Transaction_Id")
 	private int id;
 	
-	@Column(name = "Sender_Id")
+	@Column(name = "sender_account_ID")
+	private int senderAccountID;
+	
+	@Column(name = "recipient_account_ID")
+	private int recipientAccountId;
+	
+	@Column(name = "sender_ID")
 	private int senderId;
 	
-	@Column(name = "Recipient_Id")
+	@Column(name = "recipient_ID")
 	private int recipientId;
 	
+	public int getSenderId() {
+		return senderId;
+	}
+
+	public void setSenderId(int senderId) {
+		this.senderId = senderId;
+	}
+
+	public int getRecipientId() {
+		return recipientId;
+	}
+
+	public void setRecipientId(int recipientId) {
+		this.recipientId = recipientId;
+	}
+
 	@Column(name = "Summ")
 	private int summOfTransaction;
 	
@@ -50,20 +72,20 @@ public class Transactions implements Serializable{
 		this.id = id;
 	}
 
-	public int getSenderId() {
-		return senderId;
+	public int getSenderAccountID() {
+		return senderAccountID;
 	}
 
-	public void setSenderId(int senderId) {
-		this.senderId = senderId;
+	public void setSenderAccountID(int senderAccountID) {
+		this.senderAccountID = senderAccountID;
 	}
 
-	public int getRecipientId() {
-		return recipientId;
+	public int getRecipientAccountId() {
+		return recipientAccountId;
 	}
 
-	public void setRecipientId(int recipientId) {
-		this.recipientId = recipientId;
+	public void setRecipientAccountId(int recipientAccountId) {
+		this.recipientAccountId = recipientAccountId;
 	}
 
 	public int getSummOfTransaction() {
